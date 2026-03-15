@@ -10,7 +10,6 @@ A production-ready RESTful Web API built with **ASP.NET Core (.NET 8)** and **En
 - [Tech Stack](#-tech-stack)
 - [Project Structure](#-project-structure)
 - [API Endpoints](#-api-endpoints)
-- [Database Configuration](#-database-configuration)
 - [Getting Started](#-getting-started)
 - [Author](#-author)
 
@@ -79,25 +78,6 @@ officeRestAPI/
 | `POST`   | `/api/Department`       | Create a new department  |
 | `PUT`    | `/api/Department/{id}`  | Update a department      |
 | `DELETE` | `/api/Department/{id}`  | Delete a department      |
-
----
-
-## 🗄 Database Configuration
-
-Update the connection string in `appsettings.json` to match your SQL Server instance:
-
-```json
-"ConnectionStrings": {
-  "dbcs": "Server=YOUR_SERVER;Database=OfficeDB;Trusted_Connection=True;TrustServerCertificate=True;"
-}
-```
-
-Then apply EF Core migrations to create the database schema:
-
-```bash
-dotnet ef migrations add InitialCreate
-dotnet ef database update
-```
 
 ---
 
